@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2023 at 06:18 AM
+-- Generation Time: Jun 23, 2025 at 10:18 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -31,19 +31,25 @@ CREATE TABLE `alternatifs` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nmalternatif` varchar(255) NOT NULL,
   `updated_at` date NOT NULL,
-  `created_at` date NOT NULL
+  `created_at` date NOT NULL,
+  `harga` int(11) DEFAULT NULL,
+  `jenis_prosesor` varchar(50) DEFAULT NULL,
+  `kapasitas_memori` int(11) DEFAULT NULL,
+  `tipe_memori` varchar(50) DEFAULT NULL,
+  `kapasitas_harddisk` int(11) DEFAULT NULL,
+  `ukuran_layar` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `alternatifs`
 --
 
-INSERT INTO `alternatifs` (`id`, `nmalternatif`, `updated_at`, `created_at`) VALUES
-(5, 'HP 14s-dk1524AU', '2023-06-16', '2023-06-16'),
-(6, 'Lenovo IdeaPad 3 14IML05-EEID / EFID', '2023-06-16', '2023-06-16'),
-(7, 'ASUS VivoBook A409MA-BV411T / BV412T', '2023-06-16', '2023-06-16'),
-(8, 'Acer Aspire 5 A514-54-39E7', '2023-06-16', '2023-06-16'),
-(9, 'HUAWEI MateBook D14 i3', '2023-06-16', '2023-06-16');
+INSERT INTO `alternatifs` (`id`, `nmalternatif`, `updated_at`, `created_at`, `harga`, `jenis_prosesor`, `kapasitas_memori`, `tipe_memori`, `kapasitas_harddisk`, `ukuran_layar`) VALUES
+(5, 'HP 14s-dk1524AU', '2025-06-23', '2023-06-16', 5011000, '80', 4, '80', 512, 14),
+(6, 'Lenovo IdeaPad 3 14IML05-EEID / EFID', '2025-06-23', '2023-06-16', 5799000, '80', 4, '80', 512, 14),
+(7, 'ASUS VivoBook A409MA-BV411T / BV412T', '2025-06-23', '2023-06-16', 5789900, '70', 4, '80', 1000, 14),
+(8, 'Acer Aspire 5 A514-54-39E7', '2025-06-23', '2023-06-16', 10190000, '90', 8, '80', 512, 14),
+(9, 'HUAWEI MateBook D14 i3', '2025-06-23', '2023-06-16', 7199000, '80', 8, '80', 256, 14);
 
 -- --------------------------------------------------------
 
@@ -360,7 +366,7 @@ ALTER TABLE `vrangking`
 -- AUTO_INCREMENT for table `alternatifs`
 --
 ALTER TABLE `alternatifs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `bobots`
